@@ -38,7 +38,7 @@ nav ul{
     display: flex;
     flex-direction: row;
     padding: 20px;
-    gap: 40px;
+    gap: 150px;
     width: 100%;
     justify-content: center;
     text-align: center;
