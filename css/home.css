@@ -27,3 +27,24 @@ body{
     font-size: 12px;
     
 }
+
+nav{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+}
