@@ -64,13 +64,23 @@ nav ul li{
 }
 
 .CTA{
-    width: 100%;
-    margin: 20px;
-    padding: 20px;
+     width: 100%;
+     margin-top: 10px;
+
 }
 
-.CTA-btn{
-    width: 250px;
+.CTA button{
+    width: 320px;
+    height: 50px;
+    background-color: #17171c;
+    color: white;
+    border-width: 0;
+    font-weight: 400;
+    font-size: 12px;
+    border-radius: 15px;
+}
+.CTA button:hover{
+    background-color: #2afaca;
 }
 
 .glitch{
