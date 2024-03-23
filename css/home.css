@@ -48,3 +48,18 @@ nav ul{
 nav ul li{
     list-style: none;
 }
+
+.spacer1{
+    width: 100%;
+    height: 100px;
+    background-color: #2afaca;
+}
+
+.landing{
+    margin: 20px;
+    padding: 20px;
+}
+
+.landing h1{
+    font-size: 48px;
+}
