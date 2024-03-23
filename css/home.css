@@ -91,8 +91,24 @@ nav ul li{
 .glitch{
     background-color: #13aef0;
     width: 100%;
-    height: 640px;
     margin: 20px;
     padding: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
+.glitch-header{
+    margin: 20px;
+    padding: 20px;
+    font-size: 36px;
+}
+
+.g-image{
+    width: 400px;
+    height: auto;
+}
+
+.glitch-intro{
+    padding: 20px;
+}
