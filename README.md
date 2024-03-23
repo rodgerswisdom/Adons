@@ -51,4 +51,7 @@ Ensure that your website is responsive. Use media queries in your CSS to adapt t
 4. Add images, videos, and audio files to their respective directories.
 5. Test your website to ensure proper functionality and responsiveness.
 
+To view the demo site, click [here](https://rodgerswisdom.github.io/Adons/).
+
 Happy coding! 🚀
+
