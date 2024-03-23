@@ -88,3 +88,31 @@ body{
     width: 100%;
     height: 100px;
 }
+
+.support{
+    font-size: 12px;
+    padding: 20px;
+    margin: 20px;
+}
+.paypal{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: center; /* Center-align the content within the footer */
+}
+
+.icons {
+    display: flex;
+    justify-content: center; /* Center the child elements horizontally */
+    align-items: center; /* Center the child elements vertically */
+}
+
+.icons div {
+    margin: 0 10px; /* Add spacing between the icons */
+}
