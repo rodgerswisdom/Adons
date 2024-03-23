@@ -111,4 +111,7 @@ nav ul li{
 
 .glitch-intro{
     padding: 20px;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
 }
