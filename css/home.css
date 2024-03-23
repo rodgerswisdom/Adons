@@ -21,10 +21,14 @@ body{
     background-color: #2afaca;
     width: 100%;
     height: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .banner h1{
     font-size: 12px;
+    font-weight: 600;
     
 }
 
@@ -75,12 +79,13 @@ nav ul li{
     background-color: #17171c;
     color: white;
     border-width: 0;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 12px;
     border-radius: 15px;
 }
 .CTA button:hover{
-    background-color: #2afaca;
+    background-color:#2afaca;
+    color: #17171c;
 }
 
 .glitch{
