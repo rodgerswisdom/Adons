@@ -63,8 +63,20 @@ nav ul li{
     font-size: 98px;
 }
 
+.CTA{
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.CTA-btn{
+    width: 250px;
+}
+
 .glitch{
     background-color: #13aef0;
     width: 100%;
     height: 640px;
+    margin: 20px;
+    padding: 20px;
 }
