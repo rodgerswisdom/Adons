@@ -8,8 +8,12 @@
     justify-content: center;
 }
 
-.glitch-header{
+.video-div-header{
     margin: 20px;
     padding: 20px;
     font-size: 36px;
+}
+video{
+    width: 1000px;
+    height: auto;
 }
