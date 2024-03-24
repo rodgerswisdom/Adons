@@ -1,0 +1,15 @@
+.video-div{
+    background-color: #13aef0;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.glitch-header{
+    margin: 20px;
+    padding: 20px;
+    font-size: 36px;
+}
