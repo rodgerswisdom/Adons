@@ -17,3 +17,16 @@ video{
     width: 1000px;
     height: auto;
 }
+.video-text{
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.vid-text{
+    width: 680px;
+    height: auto;
+    text-align: justify;
+
+}
