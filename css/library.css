@@ -52,6 +52,7 @@ video{
     border-radius: 15px;
   }
   .comment-form button:hover {
-    opacity: 0.8;
+    background-color:#2afaca;
+    color: #17171c;
   }
   
