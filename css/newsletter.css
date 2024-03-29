@@ -29,6 +29,7 @@ input{
     width: 400px;
     height: 45px;
     /* border-radius: 5px; */
+    padding: auto;
 }
 button{
     width: 320px;
