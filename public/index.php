@@ -43,10 +43,10 @@
         <nav>
             <ul>
                 <li><a style="color: gray;">Home</a></li>
-                <li><a href="/pages/library.html">Library</a></li>
-                <li><a href="/pages/newsletter.html">Newsletter</a></li>
-                <li><a href="/pages/about-us.html">About Adons</a></li>
-                <li><a href="/pages/contact-us.html">Contact us</a></li>       
+                <li><a href="./pages/library.php">Library</a></li>
+                <li><a href="./pages/newsletter.php">Newsletter</a></li>
+                <li><a href="./pages/about.php">About Adons</a></li>
+                <li><a href="./pages/contact.php">Contact us</a></li>       
             </ul>
         </nav>
     </header>

@@ -32,11 +32,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="/pages/library.html" >Library</a></li>
-                <li><a href="/pages/newsletter.html" >Newsletter</a></li>
-                <li> <a href="./about-us.html" >About Adons</a></li>
-                <li><a href="./contact-us.html" style="color: gray;">Contact us</a></li>       
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="./library.php" >Library</a></li>
+                <li><a href="./newsletter.php" >Newsletter</a></li>
+                <li> <a href="./about.php" >About Adons</a></li>
+                <li><a href="./contact.php" style="color: gray;">Contact us</a></li>       
             </ul>
         </nav>
     </header>

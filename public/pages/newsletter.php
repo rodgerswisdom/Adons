@@ -23,11 +23,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="/pages/library.html" >Library</a></li>
-                <li><a href="/pages/newsletter.html" style="color: gray;">Newsletter</a></li>
-                <li> <a href="./about-us.html">About Adons</a></li>
-                <li><a href="./contact-us.html">Contact us</a></li>       
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="/pages/library.php" >Library</a></li>
+                <li><a href="/pages/newsletter.php" style="color: gray;">Newsletter</a></li>
+                <li> <a href="./about.php">About Adons</a></li>
+                <li><a href="./contact.php">Contact us</a></li>       
             </ul>
         </nav>
     </header>

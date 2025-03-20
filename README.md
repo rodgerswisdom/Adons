@@ -55,3 +55,4 @@ To view the demo site, click [here](https://rodgerswisdom.github.io/Adons/).
 
 Happy coding! 🚀
 
+http://localhost/Adons/public/

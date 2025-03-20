@@ -35,11 +35,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="/pages/library.html" style="color: gray;">Library</a></li>
-                <li><a href="/pages/newsletter.html" >Newsletter</a></li>
-                <li> <a href="./about-us.html">About Adons</a></li>
-                <li><a href="./contact-us.html">Contact us</a></li>        
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="./library.php" style="color: gray;">Library</a></li>
+                <li><a href="./newsletter.php" >Newsletter</a></li>
+                <li> <a href="./about.php">About Adons</a></li>
+                <li><a href="./contact.php">Contact us</a></li>   
             </ul>
         </nav>
     </header>
