@@ -24,8 +24,8 @@
         <nav>
             <ul>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="/pages/library.php" >Library</a></li>
-                <li><a href="/pages/newsletter.php" style="color: gray;">Newsletter</a></li>
+                <li><a href="./library.php" >Library</a></li>
+                <li><a href="./newsletter.php" style="color: gray;">Newsletter</a></li>
                 <li> <a href="./about.php">About Adons</a></li>
                 <li><a href="./contact.php">Contact us</a></li>       
             </ul>
