@@ -3,7 +3,7 @@
 $hostname = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'adons_database';
+$database = 'adons_db';
 
 
 $connection = new mysqli($hostname, $username, $password, $database);
