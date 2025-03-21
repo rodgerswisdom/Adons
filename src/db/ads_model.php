@@ -6,7 +6,7 @@
         $result = mysqli_query($connection, $query);
 
         $connection.close();
-
+        return $result;
     }
 
     function post_ad($title, $description, $image_url, $video_url){
@@ -14,6 +14,7 @@
         $result = mysqli_query($connection, $query);
 
         $connection.close();
+        return $result;
     }
 
     function get_one_id($ad_id){
@@ -21,6 +22,7 @@
         $result = mysqli_query($conncetion, $query);
 
         $connection.close();
+        return $result;
 
     }
 
