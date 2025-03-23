@@ -40,10 +40,44 @@
                 <div class="newsletter-card">
                     <h1 style="font-size: 56px;">Subscribe to our Newsletter</h1>
                     <!-- form -->
-                    <form>
-                        <input type="email" placeholder="john@example.com" required>
+                    <form method="POST" action="">
+                        <input type="email" name="email" placeholder="john@example.com" required>
                         <button type="submit" id="CTA-btn">Subscribe</button>
                     </form>
+                    
+            <?php
+                $hs = "localhost";
+                $username = "root";
+                $password = "";
+                $database = "adons_db";
+
+                // Create connection
+                $conn = new mysqli($hs, $username, $password, $database);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Check if form data is submitted
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email'])) {
+                    $email = $conn->real_escape_string($_POST['email']);
+
+                    // Insert data into the database
+                    $sql = "INSERT INTO newsletters_table (user_email) VALUES ('$email')";
+
+                    if ($conn->query($sql) === TRUE) {
+                        echo "<h1>Thank you for subscribing to our Newsletter!</h1>";
+                    } else {
+                        echo "<h1>Error: " . $conn->error . "</h1>";
+                    }
+                } else {
+                    echo "<h1>Subscribe to our Newsletter</h1>";
+                }
+
+                // Close connection
+                $conn->close();
+            ?>
                 </div>
                 <div class="newsletter-description">
                     <h1 style="font-size: 56px;">Adons Weekly Newsletter: Dive into Nostalgia! 🌟</h1>
