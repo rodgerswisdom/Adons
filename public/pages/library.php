@@ -86,12 +86,46 @@
                 <h1>Drop a comment</h1>
             </div>
             <div class="feedback">
-                <form class="comment-form">
+                <form class="comment-form" method="POST" action="">
                     <input type="text" name="name" placeholder="Your name..." required>
-                    <input type="email" name="email" placeholder="Your email..." required>
+                    <!-- <input type="email" name="email" placeholder="Your email..." required> -->
                     <textarea name="comment" placeholder="Your comment..." required></textarea>
                     <button type="submit" id="CTA-btn">Submit</button>
                 </form>
+                <?php
+                $hs = "localhost";
+                $username = "root";
+                $password = "";
+                $database = "adons_db";
+
+                // Create connection
+                $conn = new mysqli($hs, $username, $password, $database);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Check if form data is submitted
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name'],  $_POST['comment'])) {
+                    $name = $conn->real_escape_string($_POST['name']);
+                    $comment = $conn->real_escape_string($_POST['comment']);
+
+                    // Insert data into the database
+                    $sql = "INSERT INTO comments_table (user_name, user_comment) VALUES ('$name', '$comment')";
+
+                    if ($conn->query($sql) === TRUE) {
+                        echo "<h1>Thank you for your comment!</h1>";
+                    } else {
+                        echo "<h1>Error: " . $conn->error . "</h1>";
+                    }
+                } else {
+                    echo "<h1>Drop a comment!</h1>";
+                }
+
+                // Close connection
+                $conn->close();
+            ?>
             </div>
         </section>
     </main>

@@ -56,3 +56,45 @@ To view the demo site, click [here](https://rodgerswisdom.github.io/Adons/).
 Happy coding! 🚀
 
 http://localhost/Adons/public/
+
+
+adons_project/
+│── public/                 # Public-facing assets
+│   ├── css/                # Stylesheets
+│   │   ├── styles.css      # Main CSS file
+│   ├── js/                 # JavaScript files
+│   │   ├── main.js         # Main JavaScript logic
+│   ├── images/             # Stores ad images
+│   ├── uploads/            # Uploaded ad images/videos
+│   ├── index.php           # Homepage (Displays ads)
+│   ├── ad.php              # Individual ad page
+│   ├── subscribe.php       # Subscription page
+│   ├── contact.php         # Contact form page
+│
+│── src/                    # Source code
+│   ├── db/                 # Database interactions
+│   │   ├── config.php      # Database connection
+│   │   ├── ads.php         # Ads-related DB operations
+│   │   ├── comments.php    # Comments-related DB operations
+│   │   ├── subscribers.php # Subscription logic
+│   │   ├── contact.php     # Contact form processing
+│   │
+│   ├── api/                # API endpoints
+│   │   ├── upload_ad.php   # Upload an ad
+│   │   ├── fetch_ads.php   # Fetch all ads
+│   │   ├── fetch_comments.php # Get comments for an ad
+│   │   ├── add_comment.php # Add a comment
+│   │   ├── subscribe.php   # Subscribe a user
+│   │   ├── contact.php     # Process contact messages
+│
+│── scripts/                # Python scripts (Optional)
+│   ├── email_newsletter.py # Automates subscriber emails
+│   ├── analytics.py        # Data analysis on ads & comments
+│
+│── db/                     # Database setup
+│   ├── schema.sql          # SQL file to set up database tables
+│
+│── assets/                 # External libraries or fonts
+│
+│── .env                    # Environment variables (DB credentials, API keys)
+│── README.md               # Documentation

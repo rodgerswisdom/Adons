@@ -59,3 +59,28 @@ CREATE TABLE `contact_table` (
     `sent_at` datetime NOT NULL DEFAULT current_timestamp(),
   	PRIMARY KEY (`contact_id`)
 );
+
+ALTER TABLE `ads_table` MODIFY `ad_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `comments_table` MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `subscribers_table` MODIFY `subscriber_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `contact_table` MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
+
+
+DROP TABLE IF EXISTS `comments_table`;
+
+
+CREATE TABLE `comments_table` (
+    `comment_id` int(11) NOT NULL AUTO_INCREMENT,
+    `user_name` varchar(50) NOT NULL,
+    `user_comment` varchar(100),
+    `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+    PRIMARY KEY (`comment_id`)
+);
+
+CREATE TABLE `newsletters_table` (
+    `user_id` int(11) NOT NULL AUTO_INCREMENT,
+    `user_email` varchar(50) NOT NULL,
+    `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+    PRIMARY KEY (`user_id`)
+);
+
