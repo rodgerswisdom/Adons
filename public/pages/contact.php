@@ -66,6 +66,7 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
+                $form_status = "";
                 // Check if form data is submitted
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name'], $_POST['email'],$_POST['message'])) {
                     $name = $conn->real_escape_string($_POST['name']);
@@ -76,12 +77,12 @@
                     $sql = "INSERT INTO contact_table (name,email,message) VALUES ('$name','$email', '$message')";
 
                     if ($conn->query($sql) === TRUE) {
-                        echo "<h1>Thank you for Contacting us!</h1>";
+                        $form_status = "success";
                     } else {
-                        echo "<h1>Error: " . $conn->error . "</h1>";
+                        $form_status = $conn->error; 
                     }
                 } else {
-                    echo "<h1>Contact us</h1>";
+                    $form_status = "error";
                 }
 
                 // Close connection
@@ -90,5 +91,14 @@
             </div>
         </section>
     </main>
+
+    <script>
+        const formStatus = "<?php echo $form_status; ?>";
+        if (formStatus === "success") {
+            alert("Thank you for contacting us!");
+        } else if (formStatus === "error") {
+            alert("An error occurred. Please try again.");
+        }
+    </script>
 </body>
 </html>

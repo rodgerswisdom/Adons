@@ -58,7 +58,7 @@
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-
+                $form_status = "";
                 // Check if form data is submitted
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email'])) {
                     $email = $conn->real_escape_string($_POST['email']);
@@ -67,12 +67,12 @@
                     $sql = "INSERT INTO newsletters_table (user_email) VALUES ('$email')";
 
                     if ($conn->query($sql) === TRUE) {
-                        echo "<h1>Thank you for subscribing to our Newsletter!</h1>";
+                        $form_status = "success";
                     } else {
-                        echo "<h1>Error: " . $conn->error . "</h1>";
+                        $form_status = $conn->error;
                     }
                 } else {
-                    echo "<h1>Subscribe to our Newsletter</h1>";
+                    $form_status = "error";
                 }
 
                 // Close connection
@@ -128,6 +128,15 @@
     <div class="banner">
         <h1>&copy; 2024 Rodgers Wisdom. All Rights Reserved.</h1>
     </div>
+
+    <script>
+        const formStatus = "<?php echo $form_status; ?>";
+        if (formStatus === "success") {
+            alert("Thank you for subscribing to our newsletter!");
+        } else if (formStatus === "error") {
+            alert("An error occurred. Please try again.");
+        }
+    </script>
 <!-- ionicons links-->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

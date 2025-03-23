@@ -111,6 +111,7 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
+                $form_status = "";
                 // Check if form data is submitted
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name'], $_POST['email'])) {
                     $name = $conn->real_escape_string($_POST['name']);
@@ -120,12 +121,12 @@
                     $sql = "INSERT INTO subscribers_table (name, email) VALUES ('$name', '$email')";
 
                     if ($conn->query($sql) === TRUE) {
-                        echo "<h1>Thank you for joining the Adons Community!</h1>";
+                        $form_status = "success";
                     } else {
-                        echo "<h1>Error: " . $conn->error . "</h1>";
+                        $form_status = $conn->error ;
                     }
                 } else {
-                    echo "<h1>Join the Adons Community today!</h1>";
+                    $form_status = "error";
                 }
 
                 // Close connection
@@ -174,6 +175,14 @@
     <div class="banner">
         <h1>&copy; 2024 Rodgers Wisdom. All Rights Reserved.</h1>
     </div>
+    <script>
+        const formStatus = "<?php echo $form_status; ?>";
+        if (formStatus === "success") {
+            alert("Thank you for joining our community!");
+        } else if (formStatus === "error") {
+            alert("An error occurred. Please try again.");
+        }
+    </script>
 <!-- ionicons links-->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
