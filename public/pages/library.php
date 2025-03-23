@@ -106,6 +106,7 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
+                $comment_status = "";
                 // Check if form data is submitted
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name'],  $_POST['comment'])) {
                     $name = $conn->real_escape_string($_POST['name']);
@@ -115,12 +116,12 @@
                     $sql = "INSERT INTO comments_table (user_name, user_comment) VALUES ('$name', '$comment')";
 
                     if ($conn->query($sql) === TRUE) {
-                        echo "<h1>Thank you for your comment!</h1>";
+                        $comment_status = "success";
                     } else {
-                        echo "<h1>Error: " . $conn->error . "</h1>";
+                        $comment_status = $conn->error;
                     }
                 } else {
-                    echo "<h1>Drop a comment!</h1>";
+                    $comment_status = "error";
                 }
 
                 // Close connection
@@ -152,7 +153,17 @@
     <div class="banner">
         <h1>&copy; 2024 Rodgers Wisdom. All Rights Reserved.</h1>
     </div>
+<script>
+    const comment_success = () => alert("Thank you for your comment!");
+    const comment_error = () => alert("Error: " + onError);
 
+    const comment_status = "<?php echo $comment_status; ?>";
+    if (comment_status === "success") {
+        comment_success();
+    } else if (comment_status === "error") {
+        comment_error();
+    }
+</script>
     <!-- ionicons links-->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
